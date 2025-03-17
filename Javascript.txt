@@ -1,0 +1,120 @@
+https://www.youtube.com/watch?v=U4dSWJFIQ0A
+
+This video shows how to put a Button in 
+a website using TamperMonkey.
+
+
+Q:-Why did he use console.log()?
+  -What is a snippet?
+
+------------------------------------------
+
+https://www.youtube.com/watch?v=SBmSRK3feww&t=26822s
+
+-In HTML, we put the Javascript inside
+<script></script>
+
+Q:How can I modify the content in the 
+  website from the Console?
+
+-In the 5.Variables Section, the author shows that he first declare the variable
+in <script> and then put it inside the 
+console.log()
+
+-In the 8.Objects Section, the author shows the following:
+how to convert an object from Javascript 
+into a JSON object, and also how to do the
+conversion 
+
+------------------------------------------
+
+https://www.youtube.com/watch?v=x5trGVMKTdY
+
+Notes from the video:
+https://cs50.harvard.edu/web/2020/notes/5/
+
+-In this video, the author explains how
+to use document.querySelector to search 
+an element e of HTML and with innerHTML I can change the property of e.
+
+>document.querySelector(e).innerHTML;
+
+-In Javascript it is possible to pass a 
+function as an argument
+
+>document.querySelector('button').onclick=count; 
+//count is a function.
+//When we click the button, the function
+starts working.
+
+
+-document.addEventListener('DOMContentLoaded',function()){
+document.querySelector('button').onclick=count;
+}
+//This code allows the server to search for a button after the page has been loaded.
+
+-To run in html a piece of javascript code, I just do something like this:
+<script src="counter.js"></script>
+
+-To change the color of h1 by clicking 
+one of the buttons is the following:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Colors</title>
+     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('button').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector("#hello").style.color = button.dataset.color;
+                }
+            });
+         });
+     </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <button data-color="red">Red</button>
+    <button data-color="blue">Blue</button>
+    <button data-color="green">Green</button>
+</body>
+</html>
+
+
+-To search for a HTML Element, I can use 
+>document.querySelectorAll('button');
+Later we have seen how to write a function that makes what we have done for h1 button
+
+document.querySelectorAll('button').forEach(function(button){
+ button.onclick=function(){
+  document.querySelector('#hello').style.color=button.dataser.color;});});
+
+
+-<form>
+	<input task>//this is for the blank space
+        <input submit>//this is for the submit button
+ </form>
+
+
+-document.querySelector('#task').value;
+//to obtain the value of the task element
+
+-(1)const li=document.createElement('li');
+ li.innerHTML=task;
+ document.querySelector('#task').append(li);//to add at the end of the list li
+
+In (1) we created a new element and then 
+added a new element to it.
+
+
+
+
+
+
+
+
+
+
+
+
+

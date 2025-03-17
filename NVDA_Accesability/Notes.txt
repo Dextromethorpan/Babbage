@@ -1,0 +1,25 @@
+>case 1
+Headers
+
+>case 2
+Headers + Paragraphs
+
+>case 3 
+Header + Table
+
+>case 4 
+h1 h2 h3
+h4 h5 h6
+
+>case 5
+h1 h2 h3 
+t1 t2 t3
+h4 h5 h6
+t4 t5 t6
+
+Notes:
+-To go through all the headers, I just need to travel through all of them with 
+Caps Lock/Shift+H. But, if I want to go
+through all the paragraphs, I just need to
+use Arrows.
+

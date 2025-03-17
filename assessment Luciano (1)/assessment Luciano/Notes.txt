@@ -1,0 +1,155 @@
+#goals 
+-make left menu navigatable (1)
+-implement headers properly via aria attributes(2)
+-implement row/column headers(3)
+-label relevant form fields(4)
+
+-----------------------------------------
+
+How to solve (2)
+
+1.Search for the headers in the website
+  (Check how they are)
+  How to query them? 
+2.Use the Functions from 'UserScript'
+
+Q:-How to implement those functions?
+  -Which Aria Attributes can I use?. 
+The Aria are the one that are gonna makethe Headers to be listened, right?. 
+  -Which functions should I use?
+   Idea: Implement the accessibilityChanges() function.
+
+------------------------------------------
+
+How to solve (4)
+
+What are form fields?
+
+------------------------------------------
+
+How to solve (1)
+
+1.Query the Menu
+2.Check how to make it navigatable
+
+------------------------------------------
+
+function setAttrForClass(className, attr, value)
+setAttrForClass("#main > p > img", "aria-level", "1");
+
+What does this function is doing? 
+className: "#main > p > img" (1)
+attr: "aria-level"
+value: "1"
+
+Q: >Which are the img that are involved in (1)?
+   >Can I use the same function to do the same thing as in (2)?
+
+https://www.youtube.com/watch?v=GH1N2m75eE4 (2)
+
+--------------------------------------------
+
+ARIA-Attributes (https://www.youtube.com/watch?v=38JDscMbB4I)
+
+-expanded: to expand a menu
+-label:    to put sound into a text
+-role:     to assign attributes like being a button to a non            button element
+
+------------------------------------------
+
+Working Planning 
+>Check 'Web Accesability Education' 
+ R:https://www.youtube.com/@WebAccessibility
+>Check how to use 'SetAttrForClass' and 'SetRoleLabelForClass'
+
+------------------------------------------
+
+Q:Is it possible to give any HTML element  
+  an ARIA-label and then query from that  
+  label? Or maybe with the ARIA-role?
+
+------------------------------------------
+
+WAI-ARIA
+
+>Role
+
+R_1:https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics
+
+R_2:https://www.w3schools.com/accessibility/index.php
+
+R_3:https://www.lullabot.com/articles/what-heck-aria-beginners-guide-aria-accessibility
+
+------------------------------------------
+
+What can I do with ARIA?
+-Roles
+-Labels
+
+------------------------------------------
+
+white house website 
+
+body 
+ id page
+   id content
+    h3 
+     a
+
+
+------------------------------------------
+
+https://www.w3.org/WAI/demos/bad/after/tickets.html
+
+((Inaccessible))
+
+Check which are the Headers in NVDA 
+
+
+-----------------------------------------
+
+Check how to set up a Navigation Menu
+
+------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

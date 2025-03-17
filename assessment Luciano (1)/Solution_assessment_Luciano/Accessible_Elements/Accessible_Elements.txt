@@ -1,0 +1,29 @@
+Accessible HTML Elements from https://www.w3.org/WAI/demos/bad/after/tickets.html
+
+#List 
+-Tickets 
+  Inaccessible 
+  Accessible
+-Overview/Home/News/Tickets
+-Home/News/Tickets/Survey
+-1.&2.&3. Paragraphs under 'Citytickets Terms and Conditions'
+
+#Table
+-Concert Dates Table 
+-'Ticket prices for the Les ..' Table
+
+
+#Menu
+-Left Menu
+
+
+#Link
+-'Citylights:your access to the city'
+-Overview/Home/News/Tickets [each one is a link]
+-Home/News/Tickets/Survey [each one is a link]
+
+
+#Headings 
+-'Citylights Terms and Conditions'
+-'Citylights Ticket Offers'
+-'Accessible Tickets Page | Before and After Demonstration'

@@ -1,0 +1,52 @@
+List of Plans 
+
+1)Assign ARIA-ROLES to the following Elements:
+  -"Citylights Ticket Offers", img[23]
+	heading
+
+  -"Ticket Prices", img[25]
+	heading
+
+  -Menu, tbody[5], 'table > tbody > tr > td > a'
+	heading, navigation
+
+  -Traffic row, tbody[3]
+	heading
+
+
+2)Remove HTML Elements 
+  
+  -td background="./img/border_right.gif" [Right Border] 
+  -td background="./img/border_left.gif"  [Left Border]
+  -tr height="10px"     [Border under Inaccesible/Accessible]
+  -tr height="1px"      [Line between Menu Links]
+  -table width="155px"  [Menu Table]
+
+
+3)Create HTML Element 
+  
+  -div id="nav"  ["nav" replaces the Menu Table]
+
+
+4)Check the Tree Structure for the Embedded Tables
+  -check children nodes
+  -check InnerText in the children/mother nodes
+  -checl Img in the children/mother nodes
+
+
+5)Document all possible scenarios for Heading Candidates 
+
+
+6)Code the Javascript script to change the role and label for the 
+  Heading Candidates
+
+
+7)Assign the Left Menu a Navigation role
+  7.1) Query the Left Menu
+  7.2) Add List & List items role to the Menu
+  7.3) Check it has worked
+
+
+
+
+

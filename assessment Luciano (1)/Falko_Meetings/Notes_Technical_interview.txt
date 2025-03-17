@@ -1,0 +1,9 @@
+tampermonkey
+
+function accesability changes
+
+NVDA
+
+HTML checkings
+
+Next Meeting 2/10

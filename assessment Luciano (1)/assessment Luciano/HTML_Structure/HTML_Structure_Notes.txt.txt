@@ -1,0 +1,125 @@
+<td>
+ <p>
+  <img>
+ <table>
+
+How to go through all the elements?
+
+-td to p, childNode
+-p to img, ChildNode
+-p to td, parentElement
+-p to table, nextElementSibling
+-img to table, parentElement.nextElementSibling
+-table to p, previousElementSibling  
+
+-------------------------------------------------------------------------
+
+<tbody>
+ <tr>
+  <td>'Buy Tickets'</td> (A)
+ </tr>
+ <tr>
+  <td>'Buy Tickets'</td> (B) 
+ </tr>
+</tbody>
+
+Both 'Buy Tickets' are not Heading. 
+How to recognize that they are not Headings?
+
+For (A), 
+if(parentElement.parentElement = tbody)
+{return 'not Heading';}
+
+For (B), 
+if(parentElement.nextElementSibling=null)
+{return 'not Heading';}
+
+-----------------------------------------------------------------------
+<tr>
+ <td>
+  <p>Text
+   <b>Text</b>
+  </p>  
+ </td>
+</tr>
+
+The Child from td is not a Heading, because it consists of 
+bold and text (normal text). A Heading must have constant 
+character types.
+How to express that idea in code?
+if(td.childNodes.length >1)
+{return 'not Heading';}
+
+----------------------------------------------------------------
+<table>
+ <tr>
+  <td>
+   <div>Text</div>
+   <p>
+    Thashdhjasdhjasdhjdahjasdjhhjadhjsdajdaksfjaksfnadjkfnkdf
+    akfjakdfjakdfjakdfjakdfjkdsgkjafkdafjkafjakfjkdsfdfkjfjkf
+    kasfklkdfkfdlkflfkdfklklfdlfklfdkllkfdklflklkfdklfklfklfl
+   </p>
+  </td>
+ </tr>
+</table>
+
+In this table, there are two Nodes with Text. The first one(div) has less than 70 characters, so it has more chances of being a Heading.
+In addition, the second node is a text with more than 70 characters. Both conditions could increase the chance of declaring 
+the first Node as a Heading.
+
+if(['td > div'].innerHTML.length<70 &&       ['td>div'].nextElementSibling>70)
+{return 'Heading';}
+
+----------------------------------------------------------------
+<div id="content">
+ <h1>Citylights Ticket Offers</h1>
+ <div class="box">
+  <div id="sffloat1">...</div>
+  <div id="sffloat2">
+   <table>
+    <caption>Concert Dates</caption> 
+     <tbody>
+      <tr class="datahead">...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+     </tbody>
+   </table>
+  </div>
+ </div>
+</div>
+
+The example above is about the Concert Dates Table. 
+The Caption "Concert Date" is not a Heading. Why?.
+-Because it is followed by a table?. 
+-Because it has the following pattern:
+ >(['caption'].parentElement.parentElement)!=null
+ &
+ >['caption'].parentElement.parentElement.previousElementSibling = Text
+
+The idea is that the text('Concert Dates') above the table is not Heading because there is a text on the same line of the table ('Citylights in partnership with globo ...') and both are inside a div element.
+
+-------------------------------------------------------------------------
+ 
+<p style="padding-top:5px;">
+ <img scr="./img/headline_ticket offers.gif" ...>
+ </img>
+</p>
+
+In this case the image is a Heading. How to recognize it as a Heading?.
+The image is inside a 'rectangle mark' (style="padding-top:5px;")
+
+if (p.style[0]='padding-top') 
+{ return 'Heading';}
+
+-------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
